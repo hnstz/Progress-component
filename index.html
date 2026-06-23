@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./Progress.js" defer></script>
+    <title>Progress Component</title>
+</head>
+
+<body>
+    <h1 class="app__title">Progress</h1>
+    <div class="progress"></div>
+
+    <div class="controls">
+        <label class="control">
+            <input type="number" class="control__input" value="0" min="0" max="100">
+            <span class="control__label">Value</span>
+        </label>
+
+        <label class="control">
+            <input type="checkbox" class="control__checkbox" unchecked>
+            <div class="control__toggle"></div>
+            <span class="control__label">Animate</span>
+        </label>
+
+        <label class="control">
+            <input type="checkbox" class="control__checkbox">
+            <div class="control__toggle"></div>
+            <span class="control__label">Hide</span>
+        </label>
+    </div>
+</body>
+
+</html>
