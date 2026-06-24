@@ -4,47 +4,32 @@ class Progress {
   }
 
   setValue(value) {
-    const percent = Math.max(0, Math.min(100, Number(value)));
-    this.root.style.setProperty('--value', `${percent}%`);
+    const percent = Math.max(0, Math.min(100, Number(value) || 0));
+    this.root.style.setProperty("--value", `${percent}%`);
   }
 
   setAnimated(isAnimated) {
-    if (isAnimated) {
-      this.root.classList.add('progress--animated');
-    } else {
-      this.root.classList.remove('progress--animated');
-    }
+    this.root.classList.toggle("progress--animated", isAnimated);
   }
 
   setHidden(isHidden) {
-    if (isHidden) {
-      this.root.classList.add('progress--hidden');
-    } else {
-      this.root.classList.remove('progress--hidden');
-    }
+    this.root.classList.toggle("progress--hidden", isHidden);
   }
 }
 
-const progressElement = document.querySelector('.progress');
-const progress = new Progress(progressElement);
+const progress = new Progress(document.querySelector(".progress"));
+const valueInput = document.querySelector("#value-input");
+const animateToggle = document.querySelector("#animate-toggle");
+const hideToggle = document.querySelector("#hide-toggle");
 
-const valueInput = document.querySelector('.control__input[type="number"]');
-const toggles = document.querySelectorAll('.control__checkbox');
-const animateToggle = toggles[0];
-const hideToggle = toggles[1];
-
-valueInput.addEventListener('input', (event) => {
-  let value = parseInt(event.target.value, 10);
-  if (isNaN(value)) {
-    value = 0;
-  }
-  progress.setValue(value);
+valueInput.addEventListener("input", (event) => {
+  progress.setValue(Number(event.target.value) || 0);
 });
 
-animateToggle.addEventListener('change', (event) => {
+animateToggle.addEventListener("change", (event) => {
   progress.setAnimated(event.target.checked);
 });
 
-hideToggle.addEventListener('change', (event) => {
+hideToggle.addEventListener("change", (event) => {
   progress.setHidden(event.target.checked);
 });
