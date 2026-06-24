@@ -91,40 +91,39 @@ body {
 	cursor: pointer;
 	user-select: none;
 }
-
 .control__input {
-    width: 3.5rem;
-    height: 2rem;
+    width: 4.5rem;
+    height: 2.5rem;
     border: 0.09rem solid #000;
-    border-radius: 1rem;
+    border-radius: 1.25rem;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     box-sizing: border-box;
 }
 
 .control__toggle {
     position: relative;
-    width: 3.5rem;
-    height: 2rem;
+    width: 4.5rem;
+    height: 2.5rem;
     background-color: var(--bgToggle);
-    border-radius: 1rem;
+    border-radius: 1.25rem;
     transition: 0.3s;
 }
 
 .control__toggle::after {
     content: '';
     position: absolute;
-    top: 0.2rem;
-    left: 0.2rem;
-    width: 1.6rem;
-    height: 1.6rem;
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 2rem;
+    height: 2rem;
     background-color: #fff;
     border-radius: 50%;
     transition: 0.3s;
 }
 
 .control__checkbox:checked + .control__toggle::after {
-    transform: translateX(1.5rem);
+    transform: translateX(2rem);
 }
 
 .control__input::-webkit-outer-spin-button,
