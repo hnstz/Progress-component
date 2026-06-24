@@ -73,14 +73,14 @@ body {
 	justify-self: start;
 	align-self: start;
 	margin: 0;
-	font-size: 1.25rem;
+	font-size: 1.8rem;
 	font-weight: 500;
 }
 
 .controls {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	gap: 1.2rem;
     margin-bottom: 5rem;
 }
 
@@ -92,7 +92,7 @@ body {
 	user-select: none;
 }
 .control__input {
-    width: 4.5rem;
+    width: 4rem;
     height: 2.5rem;
     border: 0.09rem solid #000;
     border-radius: 1.25rem;
@@ -103,7 +103,7 @@ body {
 
 .control__toggle {
     position: relative;
-    width: 4.5rem;
+    width: 4rem;
     height: 2.5rem;
     background-color: var(--bgToggle);
     border-radius: 1.25rem;
@@ -123,7 +123,7 @@ body {
 }
 
 .control__checkbox:checked + .control__toggle::after {
-    transform: translateX(2rem);
+    transform: translateX(1.5rem);
 }
 
 .control__input::-webkit-outer-spin-button,
@@ -146,7 +146,7 @@ body {
 }
 
 .control__label {
-	font-size: 1rem;
+	font-size: 1.4rem;
 }
 
 @media (orientation: landscape) {
