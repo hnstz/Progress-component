@@ -24,8 +24,8 @@ html {
 }
 
 .progress {
-	width: 9.375rem;
-	height: 9.375rem;
+	width: 9rem;
+	height: 9rem;
 	min-width: 110px;
 	min-height: 110px;
 	border-radius: 50%;
@@ -93,8 +93,8 @@ body {
 }
 
 .control__input {
-	width: 3.25rem;
-	height: 2rem;
+	width: 3rem;
+	height: 1.8rem;
 	border: 0.09rem solid #000;
 	border-radius: 1rem;
 	text-align: center;
@@ -118,32 +118,32 @@ body {
 }
 
 .control__toggle {
-	position: relative;
-	width: 3.25rem;
-	height: 2rem;
-	background-color: var(--bgToggle);
-	border-radius: 1rem;
-	transition: 0.3s;
+    position: relative;
+    width: 3rem;
+    height: 1.8rem;
+    background-color: var(--bgToggle);
+    border-radius: 1rem;
+    transition: 0.3s;
 }
 
 .control__toggle::after {
-	content: '';
-	position: absolute;
-	top: 0.1875rem;
-	left: 0.1875rem;
-	width: 1.625rem;
-	height: 1.625rem;
-	background-color: #fff;
-	border-radius: 50%;
-	transition: 0.3s;
+    content: '';
+    position: absolute;
+    top: 0.15rem;
+    left: 0.15rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.control__checkbox:checked+.control__toggle::after {
+    transform: translateX(1.2rem);
 }
 
 .control__checkbox:checked+.control__toggle {
 	background-color: var(--active);
-}
-
-.control__checkbox:checked+.control__toggle::after {
-	transform: translateX(1.25rem);
 }
 
 .control__label {
